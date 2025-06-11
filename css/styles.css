@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #f8c794;
-  --secondary-color: #fff2d7;
-  --accent-color: #d8ae7e;
+  --primary-color: #fcbd7b;
+  --secondary-color: #fdd78c;
+  --accent-color: #da7400;
   --headings-color: #2d3250;
   --body-color: #7077a1;
 }
@@ -77,5 +77,35 @@ a {
   }
   .link-arrow {
     font-size: 1.5rem;
+  }
+}
+
+/*Badges*/
+
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600px;
+  padding: 1rem 2rem;
+  white-space: nowrap;
+}
+
+.badge--primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.badge--secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+.badge--small {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  badge {
+    font-size: 1.2rem;
   }
 }
