@@ -1,3 +1,7 @@
-body{
-    background-color: antiquewhite;
+:root {
+  --primary-color: #f8c794;
+  --secondary-color: #fff2d7;
+  --accent-color: #d8ae7e;
+  --headings-color: #222831;
+  --body-color: #31363f;
 }
