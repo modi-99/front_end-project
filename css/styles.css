@@ -1,3 +1,28 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+/* 
+  Apply border-box to all elements and their pseudo-elements.
+  This changes the default box model behavior so that padding 
+  and border are included *inside* the element's set width and height.
+  
+  Example:
+  ------------------------------------
+  .box {
+    width: 100px;
+    padding: 10px;
+    border: 5px solid black;
+  }
+
+  With box-sizing: content-box (default):
+    → Total width = 100 (content) + 20 (padding) + 10 (border) = 130px
+
+  With box-sizing: border-box:
+    → Total width = 100px (content + padding + border fits inside)
+*/
+
 :root {
   --primary-color: #fcbd7b;
   --secondary-color: #fdd78c;
@@ -156,4 +181,51 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn {
+  border-radius: 3rem;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+  text-align: center;
+  margin: 1rem 0rem;
+}
+
+.btn--primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.btn:hover {
+  opacity: 70%;
+}
+
+.btn--secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.btn--accent {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+.btn--outline {
+  border: 2px solid var(--primary-color);
+  background-color: #fff;
+  color: var(--primary-color);
+}
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
