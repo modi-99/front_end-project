@@ -29,6 +29,7 @@
   --accent-color: #da7400;
   --headings-color: #2d3250;
   --body-color: #7077a1;
+  --border-color: #ccc;
 }
 
 html {
@@ -226,6 +227,41 @@ a {
 
 @media screen and (min-width: 1024px) {
   .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/*inputs*/
+
+.input {
+  outline: 0;
+  border: 0;
+  border-radius: 30px;
+  padding: 1.5rem 3rem;
+  font-size: 2rem;
+}
+
+::placeholder {
+  color: #e0dee9;
+}
+
+.input-group {
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1rem 1.5rem;
+}
+.input-group .btn {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
     font-size: 1.5rem;
   }
 }
