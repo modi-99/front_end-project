@@ -128,6 +128,7 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -150,7 +151,7 @@ a {
 }
 
 .list--tick {
-  list-style-image: url(../css/img/tick.svg);
+  list-style-image: url(../img/tick.svg);
   padding-left: 3rem;
 }
 
@@ -165,6 +166,8 @@ a {
   }
 }
 
+/*Icons*/
+
 .icon {
   width: 50px;
   height: 50px;
@@ -172,6 +175,9 @@ a {
 
 .icon--primary {
   fill: var(--primary-color);
+}
+.icon--accent {
+  fill: var(--accent-color);
 }
 
 .icon-container {
@@ -182,6 +188,11 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon--small {
+  width: 20px;
+  height: 20px;
 }
 
 .btn {
@@ -264,4 +275,108 @@ a {
   .input {
     font-size: 1.5rem;
   }
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+/* here we are saying if with have a card with card--primary class then 
+the card__header of that card sholud have these styles*/
+.card--primary .card__header {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.card--secondary .card__header {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+/*Plans*/
+
+.plan__name {
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.paln__price {
+  font-size: 6rem;
+}
+
+.plan__billing-cycle {
+  opacity: 80%;
+  font-size: 2.4rem;
+  font-weight: 200;
+  margin-right: 1rem;
+}
+
+.plan__description {
+  display: block;
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+.plan--popular .card__header {
+  position: relative;
+}
+.plan--popular .card__header::before {
+  content: url(/img/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 2rem;
+  }
+
+  .paln__price {
+    font-size: 5rem;
+  }
+
+  .plan__billing-cycle {
+    opacity: 80%;
+    font-size: 2.4rem;
+    font-weight: 200;
+    margin-right: 1rem;
+  }
+
+  .plan__description {
+    font-size: 1.6rem;
+  }
+}
+
+.media {
+  display: flex;
+  flex-direction: row;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__title {
+  margin: 0;
+}
+
+.media__image {
+  margin-top: 1rem;
 }
