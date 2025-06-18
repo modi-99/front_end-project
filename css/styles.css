@@ -41,6 +41,7 @@ body {
   color: var(--body-color);
   font-size: 2.4rem;
   line-height: 1.5;
+  padding: 2rem;
 }
 
 h1,
@@ -176,18 +177,22 @@ a {
 .icon--primary {
   fill: var(--primary-color);
 }
-.icon--accent {
-  fill: var(--accent-color);
+.icon--white {
+  fill: #fff;
 }
 
 .icon-container {
   background-color: #f3f9fa;
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-container--accent {
+  background-color: var(--accent-color);
 }
 
 .icon--small {
@@ -281,7 +286,10 @@ a {
   overflow: hidden;
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
+  
 }
+
+
 
 .card__header,
 .card__body {
@@ -379,4 +387,74 @@ the card__header of that card sholud have these styles*/
 
 .media__image {
   margin-top: 1rem;
+}
+
+.quote {
+  font-size: 3rem;
+  font-style: italic;
+  color: var(--headings-color);
+  line-height: 1.3;
+}
+
+.quote__text::after {
+  content: close-quote;
+}
+.quote__text::before {
+  content: open-quote;
+}
+
+.qoute__title {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.qoute__organization {
+  margin-top: -0.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: normal;
+  opacity: 70%;
+}
+
+.qoute__line {
+  position: relative;
+  bottom: 12px;
+}
+
+/* 
+grids*/
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote {
+    font-size: 2.4rem;
+    margin-left: 7rem;
+  }
 }
