@@ -286,10 +286,7 @@ a {
   overflow: hidden;
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
-  
 }
-
-
 
 .card__header,
 .card__body {
@@ -428,6 +425,10 @@ grids*/
   display: grid;
 }
 
+.grid--1x2 {
+  grid-template-columns: 1fr 1fr;
+}
+
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: 1fr 1fr;
@@ -456,5 +457,54 @@ grids*/
   .testimonial .quote {
     font-size: 2.4rem;
     margin-left: 7rem;
+  }
+}
+
+.callout-container {
+  background-color: var(--primary-color);
+  padding: 2rem 4rem;
+  border-radius: 2rem;
+}
+
+.callout__text {
+  text-align: center;
+}
+.callout__text__header {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+.callout__text__body {
+  color: #fff;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.callout-container .btn {
+  align-self: center;
+  justify-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__text {
+    text-align: left;
+  }
+
+  .callout-container .btn {
+    justify-self: start;
+    margin-left: 5rem;
   }
 }
