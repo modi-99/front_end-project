@@ -177,6 +177,7 @@ a {
 .icon--primary {
   fill: var(--primary-color);
 }
+
 .icon--white {
   fill: #fff;
 }
@@ -576,4 +577,64 @@ grids*/
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+/**/
+.nav {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #222;
+}
+
+.nav__item > a {
+  color: #b8b8b8;
+  transition: color 0.2s;
+}
+
+.nav__item > a:hover {
+  color: #fff;
+}
+
+.icon--opacity {
+  opacity: 60%;
+  transition: opacity 0.2s;
+}
+
+.icon--opacity:hover {
+  opacity: 100%;
+}
+
+.nav__brand {
+  transform: translateY(5px);
+}
+
+@media screen and (min-width: 768px) {
+  .nav .icon {
+    display: none;
+  }
+
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item {
+    border: 0;
+  }
 }
