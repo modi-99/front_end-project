@@ -49,6 +49,7 @@ h2,
 h3 {
   color: var(--headings-color);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -170,22 +171,25 @@ a {
 /*Icons*/
 
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
 }
 
 .icon--primary {
   fill: var(--primary-color);
 }
 
+.icon--accent {
+  fill: var(--accent-color);
+}
 .icon--white {
   fill: #fff;
 }
 
 .icon-container {
   background-color: #f3f9fa;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 100%;
   display: inline-flex;
   justify-content: center;
@@ -315,6 +319,10 @@ the card__header of that card sholud have these styles*/
   font-size: 2.5rem;
 }
 
+.plan {
+  transition: transform 0.2s;
+}
+
 .paln__price {
   font-size: 6rem;
 }
@@ -347,6 +355,16 @@ the card__header of that card sholud have these styles*/
   position: absolute;
   top: -6px;
   right: 5%;
+}
+.plan--popular {
+  transform: scale(1.1);
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -427,12 +445,22 @@ grids*/
 }
 
 .grid--1x2 {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.grid--1x3 {
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 1050px) {
+  .grid--1x3 {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -549,6 +577,7 @@ grids*/
 
 .block__heading {
   margin-top: 0;
+  color: #fff;
 }
 
 .block--dark {
@@ -637,4 +666,81 @@ grids*/
   .nav__item {
     border: 0;
   }
+}
+
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.hero__tagline {
+  font-size: 2rem;
+  color: #b8b8b8;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 0rem;
+  }
+  .hero__content {
+    text-align: left;
+    align-self: center;
+  }
+}
+
+/*Domain bloc*/
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+/* Plans block*/
+
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.featured__heading {
+  margin-top: 1rem;
+}
+
+.feature {
+  gap: 4rem;
+  margin: 10rem;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
 }
